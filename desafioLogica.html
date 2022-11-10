@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Desafio - Lógica</title>
+</head>
+
+<body>
+    <h1></h1>
+</body>
+<script>
+
+
+    let lista = [1, 1, 1,]
+    let recebeLista
+    let acumulaValor = 0
+
+
+    function criaFase3() {
+
+        recebeLista = [...lista]
+
+        for (let i = 0; i < lista.length; i++) {
+            lista[i] = parseInt(Math.random() * 3) + 1;
+        }
+
+        if (lista[0] === recebeLista[0] && lista[1] === recebeLista[1] &&
+            lista[2] === recebeLista[2]
+        ) {
+            acumulaValor++
+            if (acumulaValor === 1) { console.log(`Porta ${acumulaValor} Aberta`) }
+
+            else if (acumulaValor === 2) { console.log(`Porta ${acumulaValor} Aberta`) }
+            else if (acumulaValor === 3) { console.log(`Porta ${acumulaValor} Aberta`) }
+
+        }
+        else { console.log("Tente Novamente") }
+    }
+
+    for (let i = 0; i < 30; i++) {
+        criaFase3()
+    }
+
+
+</script>
+
+</html>
